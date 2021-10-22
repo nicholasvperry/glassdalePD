@@ -1,8 +1,8 @@
 export const Officer = (Object) => {
     return `
-        <section>
-         ${Object.name} 
-            </section>
+        <div class ="officerTag">
+         <div>${Object.name}</div>
+            </div>
     
     `
 

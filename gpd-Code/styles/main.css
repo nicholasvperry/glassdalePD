@@ -1,0 +1,52 @@
+.criminalFlexContainer {
+    display: grid;
+    grid-template-columns: auto auto auto auto; 
+    justify-content: space-evenly;
+    
+   
+}
+
+.criminalTag{
+    justify-content: center;
+    border: 1px solid black;
+    width: 200px;
+    padding: 5px;
+    margin: 15px;
+
+}
+
+h2 {
+    text-align: center;
+}
+
+.facilityContainer{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.facilityTag{
+    border: 1px solid black;
+    width: 200px;
+    padding: 5px;
+    margin: 15px;
+
+}
+
+.officerTag{
+    color: blue;
+    margin: 15px;
+}
+
+.officerContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    justify-content: space-evenly;
+    text-align: center;
+
+    }
+
+.officers{
+    border: 1px dashed black;
+    
+}

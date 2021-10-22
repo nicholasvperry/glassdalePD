@@ -1,3 +1,9 @@
 import { OfficerList } from "./officers/OfficerList.js";
 
-OfficerList
+import {CriminalList} from "./criminals/CriminalList.js";
+
+import {FacilityList} from "./facilities/FacilityList.js"
+
+CriminalList()
+OfficerList()
+FacilityList()
