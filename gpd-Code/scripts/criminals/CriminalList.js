@@ -14,8 +14,17 @@ export const CriminalList = () => {
             criminalHTML += Criminal(singleCriminalObj)
         })
 
-        contentTarget.innerHTML = criminalHTML
+        contentTarget.innerHTML = 
+        ` <h2>Criminals</h2>
+           <div class="criminalHTML">${criminalHTML}</div>
+        `
     }
     
     )
 }
+
+
+
+document.querySelector("#criminals-nav-link").addEventListener("click", () => {
+    CriminalList()
+})

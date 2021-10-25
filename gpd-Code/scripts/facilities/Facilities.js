@@ -10,5 +10,6 @@ export const Facilities = (facilityObject) => {
     
     
     `
-
 }
+
+export const facilityHeader = `<h2>Facilities</h2>`

@@ -4,12 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="styles/main.css">
     <title>Glassdale Police Department</title>
 </head>
 <body>
+    <!--Nav Bar Component -->
+    <nav class="navBar">
+        <ul>
+          <li>
+            <a id="criminals-nav-link" href="#">Criminals</a>
+          </li>
+          <li>
+            <a id="officers-nav-link" href="#">Officers</a>
+          </li>
+          <li>
+            <a id="facilitiesnav-link" href="#">Facilities</a>
+          </li>
+          <li>
+            <a id="notes-nav-link" href="#">Notes</a>
+          </li>
+          <li><button id="dark-mode">Dark Mode</button></li>
+        </ul>
+      </nav>
+  
     
-    <h2>Criminals</h2>
+    
+
+    <h2 class="criminalHeader"></h2>
     <section class="criminals">
         <div class="convictions-select-container"></div>
         <div class="criminalFlexContainer">
@@ -18,14 +39,14 @@
     </section>
 
     <section class="officers">
-        <h2>Officers</h2>
+        <h2 class="officerHeader"></h2>
         <div class="officerContainer"></div>
         
         </div>
     </section>
 
     <section class="facilities">
-        <h2>Facilities</h2>
+        <h2 class="facilityHeader"></h2>
         <div class="facilityContainer"></div>
         
         </div>
@@ -33,6 +54,6 @@
 
 
 
-    <script type="module" src="/scripts/main.js"></script>
+    <script type="module" src="scripts/main.js"></script>
 </body>
 </html>

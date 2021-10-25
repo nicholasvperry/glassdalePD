@@ -1,7 +1,7 @@
-import { Facilities } from "./Facilities.js";
+import { Facilities, facilityHeader } from "./Facilities.js";
 import { getFacilities, useFacilities } from "./FacilityDataProvider.js";
 
-const contentTarget = document.querySelector(".facilityContainer")
+const contentTarget = document.querySelector(".criminalFlexContainer")
 
 export const FacilityList = () => {
     getFacilities()
@@ -13,6 +13,18 @@ export const FacilityList = () => {
         facilityArray.forEach((singleFacilityObj) => {
             facilityHTML += Facilities(singleFacilityObj)
         })
-        contentTarget.innerHTML = facilityHTML
+        contentTarget.innerHTML = 
+        `<h2 >Facilities</h2>
+           <div class="facilityHTML">${facilityHTML}</div>
+        `
     })
 }
+
+const insertFacilityHeader = () => document.querySelector(".facilityHeader").innerHTML = facilityHeader
+
+document.querySelector("#facilitiesnav-link").addEventListener("click", () => {
+    // invoke the function that prints the criminals
+    insertFacilityHeader()
+    FacilityList()
+
+})
