@@ -9,9 +9,13 @@ import { NoteForm } from "./notes/NoteForm.js";
 
 import {NoteList} from "./notes/NoteList.js"
 
+import {ConvictionSelect} from "./Conviction/ConvictionSelect.js"
 
 
 NoteForm()
+
+
+
 
 const darkModeButton = document.querySelector("#dark-mode")
 

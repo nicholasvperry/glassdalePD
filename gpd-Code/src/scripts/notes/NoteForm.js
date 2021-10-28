@@ -10,8 +10,8 @@ const contentTarget = document.querySelector(".noteForm")
 contentTarget.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "saveNote") {
         
-        //Prevents refresh         
-        clickEvent.preventDefault()
+        // //Prevents refresh         
+        // clickEvent.preventDefault()
 
         //Format the date
 
@@ -19,12 +19,14 @@ contentTarget.addEventListener("click", clickEvent => {
         const newNote = {
             // Key/value pairs here
             Suspect: document.querySelector(`#Name`).value,
-            Date: document.querySelector(`#Date`).value.toLocalDateString(`en-US`),
+            Date: document.querySelector(`#Date`).value,
             NoteText: document.querySelector(`#noteText`).value
             
 
         }
-
+        document.querySelector(`#Name`).value = ""
+        document.querySelector(`#Date`).value = ""
+        document.querySelector(`#noteText`).value = ""
         // Change API state and application state
         saveNote(newNote)
         .then(NoteList) // Refresh your list of notes once you've saved your new one
@@ -39,7 +41,7 @@ contentTarget.addEventListener("click", clickEvent => {
 export const NoteForm = () => {
     contentTarget.innerHTML = `
         
-   <form class="inputForm">
+   <div class="inputForm">
     <div class="addDate">
             <label>Date of entry:</label>
             <input type="Date" name="Date" id="Date">
@@ -58,12 +60,12 @@ export const NoteForm = () => {
                 
         <label >Note:</label>
         <textarea name="" id="noteText" cols="30" rows="2" required></textarea>
-        <button class="saveButton">Save Note</button>
+        <button  id="saveNote" class="saveButton">Save Note</button>
 
     </div>
 
            
-    </form>
+    </div>
     `
 }
 

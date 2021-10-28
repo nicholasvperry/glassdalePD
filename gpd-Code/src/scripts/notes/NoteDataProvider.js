@@ -24,7 +24,7 @@ export const saveNote = (note) => {
         },
         body: JSON.stringify(note)
     })
-    
+    .then(getNotes)
     
 }
 
