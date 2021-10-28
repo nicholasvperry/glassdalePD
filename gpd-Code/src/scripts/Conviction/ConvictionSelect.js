@@ -3,6 +3,7 @@
  *   which lists all convictions in the Glassdale PD API
  */
 import { useConvictions, getConvictions } from "./ConvictionProvider.js"
+import { CriminalList } from "../criminals/CriminalList.js"
 
 
 export const ConvictionSelect = () => {
@@ -30,3 +31,16 @@ const render =( convictionsCollection, contentTarget ) => {
         </select>
     `
 }
+
+const eventHub = document.querySelector("body")
+
+
+eventHub.addEventListener("change", (eventObj) => {
+    
+    if(eventObj.target.id === "crimeSelect"){
+       CriminalList(eventObj.target.value)
+    }
+})
+
+
+

@@ -4,13 +4,21 @@ import { ConvictionSelect } from "../Conviction/ConvictionSelect.js";
 
 const contentTarget = document.querySelector(".criminalFlexContainer")
 
-export const CriminalList = () => {
+export const CriminalList = (convictionFilter) => {
     getCriminals()
     .then(() => {
         let criminalArray = useCriminals()
 
-        let criminalHTML = ""
+        if (convictionFilter) {
+            criminalArray = criminalArray.filter((singleCriminalObj) => {
+                return singleCriminalObj ? singleCriminalObj.conviction === convictionFilter : false
+            }
+            
+            )
+        }
 
+        let criminalHTML = ""
+        
         criminalArray.forEach((singleCriminalObj) => {
             criminalHTML += Criminal(singleCriminalObj)
         })
