@@ -1,4 +1,4 @@
-import { Officer } from "./Officer.js";
+import { Officer } from "./OfficerCard.js";
 import { getOfficers, useOfficers } from "./OfficerDataProvider.js";
 
 

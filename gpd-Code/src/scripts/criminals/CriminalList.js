@@ -1,4 +1,4 @@
-import { Criminal } from "./Criminals.js";
+import { Criminal } from "./CriminalCard.js";
 import { getCriminals, useCriminals } from "./CriminalDataProvider.js";
 
 const contentTarget = document.querySelector(".criminalFlexContainer")
@@ -28,3 +28,5 @@ export const CriminalList = () => {
 document.querySelector("#criminals-nav-link").addEventListener("click", () => {
     CriminalList()
 })
+
+
