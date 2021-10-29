@@ -33,12 +33,13 @@ const render =( convictionsCollection, contentTarget ) => {
 }
 
 const eventHub = document.querySelector("body")
-
+//eventHub targets everything in the body
 
 eventHub.addEventListener("change", (eventObj) => {
-    
+    //"Change" means check for a change in whatever is defined below (crimeSelect)
     if(eventObj.target.id === "crimeSelect"){
-       CriminalList(eventObj.target.value)
+        //passes object created into criminal list to only print selected objects
+       CriminalList("crimeSelect", eventObj.target.value)
     }
 })
 

@@ -1,3 +1,8 @@
+import { getConvictions, useConvictions } from "../Conviction/ConvictionProvider.js"
+import { getCriminals, useCriminals } from "../criminals/CriminalDataProvider.js"
+import { OfficerList } from "./OfficerList.js"
+import {CriminalList} from "../criminals/CriminalList.js"
+
 let officers = []
 
 export const useOfficers = () => {
@@ -17,3 +22,41 @@ export const getOfficers = () => {
     } )
 }
 
+
+export const officerSelect = () => {
+    //get all officers from officer list
+    const officerTarget = document.querySelector(".filters_officer")
+    
+    getCriminals()
+    .then(() => {
+    const officers = useCriminals()
+    render (officers, officerTarget)
+}) 
+}
+
+const render = (officersCollection, officerTarget) => {
+    officerTarget.innerHTML = `
+    <select class="dropdown" id="officerSelect">
+    <option value="0">Please Select Officer</option>
+        ${officersCollection.map((officersObj) => {
+        const officer = officersObj.arrestingOfficer
+        return `<option>${officer}</option>`
+
+    })
+    }
+    </select>
+    
+    `
+}
+
+//evenHub targets whole body
+const eventHub = document.querySelector("body")
+
+eventHub.addEventListener("change", (eventObj) => {
+    //Listen for event change on officerSelect
+    if(eventObj.target.id === "officerSelect") {
+        //pass evendObj into OfficerList
+        CriminalList("officerSelect", eventObj.target.value)
+    }
+
+})

@@ -1,20 +1,28 @@
 import { Officer } from "./OfficerCard.js";
-import { getOfficers, useOfficers } from "./OfficerDataProvider.js";
+import { getOfficers, useOfficers, officerSelect } from "./OfficerDataProvider.js";
 
 
 
 const contentTarget = document.querySelector(".criminalFlexContainer")
 
-export const OfficerList = () => {
+export const OfficerList = (officerFilter) => {
     getOfficers()
     .then(() => {
         
         let officerArray = useOfficers()
         
+        if (officerFilter) {
+            officerArray = officerArray.filter((singleOfficerObj) => {
+                return singleOfficerObj ? singleOfficerObj.name === officerFilter : false
+
+            })
+        }
+
         let officerHTML = ""
-        
+
         officerArray.forEach((singleOfficerObj) => {
             officerHTML += Officer(singleOfficerObj)
+
         })
 
         contentTarget.innerHTML = `<section class="officerCSS">
@@ -23,6 +31,7 @@ export const OfficerList = () => {
             
         </section> `
     })
+    
 }
 
 
