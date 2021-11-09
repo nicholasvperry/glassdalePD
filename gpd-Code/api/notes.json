@@ -3,25 +3,19 @@
     {
       "id": 1,
       "Suspect": "Steven Powers",
-      "Date": "10/17/17",
+      "Date": "2017-10-17",
       "NoteText": "Steven fell down and broke 6 ribs in a camera blind spot"
-    },
-    {
-      "id": 2,
-      "Suspect": "Rod Rosenstein",
-      "Date": "10/22/22",
-      "NoteText": "Rod got a visitor HC"
     },
     {
       "id": 3,
       "Suspect": "Alec Baldwin",
-      "Date": "10/20/21",
+      "Date": "2021-10-20",
       "NoteText": "Called daughter and left a mean voicemail"
     },
     {
       "id": 4,
       "Suspect": "Jasmine Sandevol",
-      "Date": "10/20/25",
+      "Date": "2020-10-01",
       "NoteText": "Did a perfect eyebrow wax for inmate"
     },
     {
@@ -35,6 +29,18 @@
       "Date": "2021-10-22",
       "NoteText": "Mr Potato ate Steven for lunch.",
       "id": 6
+    },
+    {
+      "Suspect": "Andy Birt",
+      "Date": "2021-10-28",
+      "NoteText": "Hooked me up with date format!",
+      "id": 8
+    },
+    {
+      "Suspect": "Aki",
+      "Date": "2021-12-02",
+      "NoteText": "Aki is getting her notes to work.",
+      "id": 9
     }
   ]
 }

@@ -10,10 +10,6 @@ const contentTarget = document.querySelector(".noteForm")
 contentTarget.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "saveNote") {
         
-        // //Prevents refresh         
-        // clickEvent.preventDefault()
-
-        //Format the date
 
         // Make a new object representation of a note
         const newNote = {
