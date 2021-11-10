@@ -20,6 +20,8 @@ contentTarget.addEventListener("click", clickEvent => {
             
 
         }
+
+        //clear out the form
         document.querySelector(`#Name`).value = ""
         document.querySelector(`#Date`).value = ""
         document.querySelector(`#noteText`).value = ""

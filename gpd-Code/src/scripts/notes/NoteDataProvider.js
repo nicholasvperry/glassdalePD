@@ -28,6 +28,8 @@ export const saveNote = (note) => {
     
 }
 
+
+//deletNote fetch call. Needs to target ID
 export const deleteNote = noteId => {
     return fetch(`http://localhost:8088/notes/${noteId}`, {
         method: "DELETE"

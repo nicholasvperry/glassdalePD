@@ -36,7 +36,7 @@ deleteHub.addEventListener("click", (deleteObject) => {
 const editHub = document.querySelector("body")
 editHub.addEventListener("click", (editObject) => {
     if (editObject.target.id.startsWith("edit")) {
-    console.log("you clicked")
+   
     const noteId = +editObject.target.id.split("--")[1]
     NoteEditForm(noteId)}
 })

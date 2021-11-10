@@ -52,7 +52,14 @@ h2 {
     
 }
 
-
+body{
+    background-image: url("http://brightbluecreative.co.uk/wp-content/uploads/2018/04/Tech-background.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+}
 .dark-background{
     background-image: url("https://wallpaperaccess.com/full/1434772.jpg");
     color: #c2df23;
