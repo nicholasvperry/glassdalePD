@@ -26,7 +26,6 @@ deleteHub.addEventListener("click", (deleteObject) => {
    
   if (deleteObject.target.id.startsWith("deleteNote")) {
     const idToDelete = deleteObject.target.id.split("--")[1]
-    console.log(idToDelete)
     deleteNote(idToDelete)
     .then(NoteList)
 

@@ -8,7 +8,7 @@ export const NoteEditForm = (noteId) => {
     // Give this component access to our application's notes state
     const allNotes = useNotes();
 
-    // Find the note that we clicked on by its unique id
+    // Find the note that we clicked on by its id
     const noteWeWantToEdit = allNotes.find(singleNote=> singleNote.id === noteId)
 
     // Print the form
@@ -19,7 +19,7 @@ export const NoteEditForm = (noteId) => {
         <input type="date" id="note-date" value="${noteWeWantToEdit.Date}" />
         <input type="text" value="${noteWeWantToEdit.Suspect}" id="note-suspect" />
         <input type="text" value="${noteWeWantToEdit.NoteText}" id="note-text" />
-        <button id="saveNoteChanges--${noteId}">Save Changes</button>
+        <button id="saveNoteChanges-${noteId}">Save Changes</button>
     `
 }
 
@@ -34,7 +34,7 @@ eventHub.addEventListener("click", (event) => {
         //+ in front of even looks for intiger
         //the id is pulled from the save changes button
         const editedNote = {
-            id: +event.target.id.split("--")[1],
+            id: +event.target.id.split("-")[1],
             Suspect: document.querySelector(`#note-suspect`).value,
             Date: document.querySelector(`#note-date`).value,
             NoteText: document.querySelector(`#note-text`).value
