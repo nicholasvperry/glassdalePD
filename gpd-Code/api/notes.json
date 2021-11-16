@@ -1,0 +1,28 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "Date": "2017-10-17",
+      "NoteText": "Steven fell down and broke 105 ribs in a camera blind spot",
+      "criminalId": 11
+    },
+    {
+      "id": 2,
+      "Date": "2021-10-20",
+      "NoteText": "Called daughter and left her a mean voicemail",
+      "criminalId": 2
+    },
+    {
+      "id": 3,
+      "Date": "2020-10-01",
+      "NoteText": "Did a perfect eyebrow wax for inmate",
+      "criminalId": 3
+    },
+    {
+      "criminalId": 13,
+      "Date": "2021-11-17",
+      "NoteText": "Ruben went to Arby's and had a big ruben.",
+      "id": 4
+    }
+  ]
+}

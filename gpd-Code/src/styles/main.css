@@ -1,0 +1,216 @@
+.criminalHTML {
+    display: grid;
+    grid-template-columns: auto auto auto auto; 
+    justify-content: space-evenly;
+    
+   
+}
+
+.criminalTag{
+    justify-content: center;
+    border: 1px solid rgb(238, 149, 16);
+    width: 200px;
+    padding: 5px;
+    margin: 15px;
+
+}
+
+.filters_crime{
+    padding: 50px;
+}
+
+
+h2 {
+    text-align: center;
+}
+
+.facilityHTML{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.facilityTag{
+    border: 1px solid rgb(238, 149, 16);
+    width: 200px;
+    padding: 5px;
+    margin: 15px;
+
+}
+
+.officerTag{
+    margin: 15px;
+    
+    
+}
+
+.officerContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+
+body{
+    background-image: url("http://brightbluecreative.co.uk/wp-content/uploads/2018/04/Tech-background.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+}
+.dark-background{
+    background-image: url("https://wallpaperaccess.com/full/1434772.jpg");
+    color: #c2df23;
+  }
+  
+.criminal-background {
+    background-image: url("https://i.ytimg.com/vi/VGQJaK6ESk8/maxresdefault.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  
+.officer-background {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHpg22aYTlbGEdFi_uJsfGw84T0LmaOqL9Vw&usqp=CAU");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.notes-background {
+    background-image: url("https://cdn.shopify.com/s/files/1/2118/5289/products/EnvyLoops_Interconnected_V1_-_Glow-4K0_394x.jpg?v=1527308804");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.facility-background {
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/59c7a9ed-09b7-4792-8cec-2dc8b96fe260/d7nny02-2fd83011-9738-4aa4-ba73-2dc99ca6f81b.jpg/v1/fill/w_1024,h_823,q_75,strp/professional_background_2___free_use_by_theartist100_d7nny02-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODIzIiwicGF0aCI6IlwvZlwvNTljN2E5ZWQtMDliNy00NzkyLThjZWMtMmRjOGI5NmZlMjYwXC9kN25ueTAyLTJmZDgzMDExLTk3MzgtNGFhNC1iYTczLTJkYzk5Y2E2ZjgxYi5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.xi5trZdkJRT51gq98hEUhjG6Si1rj6MLiVZTSocKiQw");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navBar ul{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    font-family:'Source Serif Pro', serif;
+    justify-content: space-evenly;
+    align-content: center;
+    margin-bottom: 2em;
+    margin-left: 0.5em;
+    padding: 0.5em;
+}
+
+.navBar li{
+    display: inline-block;
+}
+
+.notesHTML {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.noteTag{
+    border: 1px solid rgb(238, 149, 16);
+    width: 250px;
+    padding: 5px;
+    margin: 15px;
+
+}
+
+.inputForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.saveButton {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    cursor: pointer;
+    border-radius: 12px;
+    font-size: 15px;
+}
+
+.saveButton:hover {
+    background-color: #555555;
+    color: white;
+
+}
+
+#dark-mode {
+    background-color: #555555;
+    color: white;
+    cursor: pointer;
+    border-radius: 12px;
+    font-size: 15px;
+}
+
+#dark-mode:hover {
+    background-color: white;
+    color: black;
+}
+
+#criminals-nav-link {
+    background-color: #555555;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 18px;
+}
+
+#criminals-nav-link:hover {
+    background-color: white;
+    color: black;
+}
+
+#officers-nav-link {
+    background-color: #555555;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 18px;
+}
+
+#officers-nav-link:hover {
+    background-color: white;
+    color: black;
+}
+
+#facilitiesnav-link {
+    background-color: #555555;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 18px;
+}
+
+#facilitiesnav-link:hover {
+    background-color: white;
+    color: black;
+}
+
+#notes-nav-link {
+    background-color: #555555;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 18px;
+}
+
+#notes-nav-link:hover {
+    background-color: white;
+    color: black;
+}
+
+
+.filterCSS{
+    display: flex;
+    justify-content: start;
+}
