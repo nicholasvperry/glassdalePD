@@ -36,8 +36,12 @@ export const CriminalList = (whichFilter, wordToFilter) => {
 
         contentTarget.innerHTML = 
         ` <h2>Criminals</h2>
+            
+        <div class="filterCSS">
             <div class="filters_crime"></div>
             <div class="filters_officer"></div>
+            </div>
+
            <div class="criminalHTML">${criminalHTML}</div>
         `
     })
@@ -50,9 +54,10 @@ export const CriminalList = (whichFilter, wordToFilter) => {
 
 
 
+
 document.querySelector("#criminals-nav-link").addEventListener("click", () => {
     CriminalList()
-    
+    document.querySelector(".noteForm").innerHTML = ""
 })
 
 

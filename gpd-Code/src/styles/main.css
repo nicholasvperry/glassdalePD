@@ -124,6 +124,7 @@ body{
 
 .inputForm{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: baseline;
 }
@@ -209,3 +210,7 @@ body{
 }
 
 
+.filterCSS{
+    display: flex;
+    justify-content: start;
+}

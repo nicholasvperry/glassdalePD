@@ -1,5 +1,6 @@
 import { saveNote } from "./NoteDataProvider.js"
 import { NoteList } from "./NoteList.js"
+import { getCriminals, useCriminals } from "../criminals/CriminalDataProvider.js"
 
 
 
@@ -14,7 +15,8 @@ contentTarget.addEventListener("click", clickEvent => {
         // Make a new object representation of a note
         const newNote = {
             // Key/value pairs here
-            Suspect: document.querySelector(`#Name`).value,
+            //Add + to id to make it a number
+            criminalId: +document.querySelector(`#select-criminal`).value,
             Date: document.querySelector(`#Date`).value,
             NoteText: document.querySelector(`#noteText`).value
             
@@ -22,7 +24,7 @@ contentTarget.addEventListener("click", clickEvent => {
         }
 
         //clear out the form
-        document.querySelector(`#Name`).value = ""
+        document.querySelector(`#select-criminal`).value = ""
         document.querySelector(`#Date`).value = ""
         document.querySelector(`#noteText`).value = ""
         // Change API state and application state
@@ -34,42 +36,39 @@ contentTarget.addEventListener("click", clickEvent => {
     
 })
 
+//Make the list for the drop down and insert it in to NoteForm
+//Map through array and pull out the single objects pulling out the names and adding them to the dropdown
+//make sure to add value for id
+const nameSelect = criminalNames => {
+    return `
+    <select id="criminalFk" class="criminalDropdown">
+        <option value="0">Select a criminal</option>
+        ${criminalNames.map(singleCriminal => {
+            return `<option value="${singleCriminal.id}">${singleCriminal.name}</option>`
+            })}
+    </select> 
+    `
 
+        }
 
-export const NoteForm = () => {
-    contentTarget.innerHTML = `
         
+//Make form and insert nameSelect into our form
+export const NoteForm = () => {
+    return getCriminals()
+    .then(() => {
+        const names = useCriminals()
+           contentTarget.innerHTML = `
+       
    <div class="inputForm">
     <div class="addDate">
-            <label>Date of entry:</label>
-            <input type="Date" name="Date" id="Date">
-        
+            <input type="Date" name="Date" id="Date">        
     </div>
-
-              
-    <div class="suspectName">
     
-        <label >Suspect Name:</label>
-        <input id="Name" type="text" required>
-    
-    </div>
+    ${nameSelect(names)}
 
-    <div class="noteText">
-                
-        <label >Note:</label>
-        <textarea name="" id="noteText" cols="30" rows="2" required></textarea>
-        <button  id="saveNote" class="saveButton">Save Note</button>
-
-    </div>
-
-           
+    <textarea name="" id="noteText" cols="30" rows="2" placeholder="Note" required></textarea>
+    <button  id="saveNote" class="saveButton">Save Note</button>          
+                  
     </div>
     `
-}
-
-
-
-
-
-
-
+})}

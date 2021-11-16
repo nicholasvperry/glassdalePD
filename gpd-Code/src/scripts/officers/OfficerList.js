@@ -38,4 +38,5 @@ export const OfficerList = (officerFilter) => {
 
 document.querySelector("#officers-nav-link").addEventListener("click", () => {
     OfficerList()
+    document.querySelector(".noteForm").innerHTML = ""
 })

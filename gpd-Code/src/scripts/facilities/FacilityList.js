@@ -26,5 +26,6 @@ document.querySelector("#facilitiesnav-link").addEventListener("click", () => {
     // invoke the function that prints the criminals
     
     FacilityList()
+    document.querySelector(".noteForm").innerHTML = ""
 
 })

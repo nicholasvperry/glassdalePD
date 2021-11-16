@@ -2,15 +2,15 @@ import { NoteList } from "./NoteList.js";
 import { deleteNote } from "./NoteDataProvider.js";
 import { NoteEditForm } from "./NoteEditForm.js";
 
-export const Notes = (noteObject) => {
+export const Notes = (note, findCriminal) => {
     return `
     
     <div class="noteTag">
-    <div class="suspectName">${noteObject.Suspect}</div>
-        <div class="noteDate">${noteObject.Date}</div><br>
-        <div class="noteText">${noteObject.NoteText}</div>
-        <button id="deleteNote--${noteObject.id}">Delete</button>
-        <button id="edit--${noteObject.id}">Edit</button>
+        <div class="suspectName">${findCriminal.name}</div>
+        <div class="noteDate">${note.Date}</div><br>
+        <div class="noteText">${note.NoteText}</div>
+        <button class="saveButton" id="deleteNote--${note.id}">Delete</button>
+        <button class="saveButton" id="edit--${note.id}">Edit</button>
         </div>
     
     
@@ -19,7 +19,7 @@ export const Notes = (noteObject) => {
     `
     
 }
-
+ 
 
 const deleteHub = document.querySelector("body") 
 deleteHub.addEventListener("click", (deleteObject) => {
